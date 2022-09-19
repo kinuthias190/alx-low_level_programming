@@ -1,18 +1,24 @@
-#include <stdio.h>
-#include <string.h>
-#include "main.h"
+#include "holberton.h"
 
 /**
-*print_rev - Prints a string in reverse order
-*@s: String to reverse
-*Return: Nothing
-*/
-
-void print_rev(char *s)
+ * rev_string - a function that reverses a string
+ * @s: input to reverse
+ * Return: string and in reverse
+ */
+void rev_string(char *s)
 {
-	int len = strlen(s);
+	char rev = s[0];
+	int fcounter = 0;
+	int i;
 
-	while (len--)
-		putchar(*(s + len));
-	putchar(10);
+	while (s[fcounter] != '\0')
+		fcounter++;
+
+	for (i = 0; i < fcounter; i++)
+	{
+		fcounter--;
+		rev = s[i];
+		s[i] = s[fcounter];
+		s[fcounter] = rev;
+	}
 }
