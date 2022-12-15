@@ -1,5 +1,8 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef DYNAMIC_LIB_H
+#define DYNAMIC_LIB_H
+
+#include <stdlib.h>
+
 
 int _putchar(char c);
 int _islower(int c);
